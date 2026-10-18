@@ -13,7 +13,7 @@ env:
   ANDROID_HOME: /usr/local/lib/android/sdk
   JAVA_HOME: /usr/lib/jvm/temurin-17-jdk-amd64
   CYTHON_LANGUAGE_LEVEL: "3"
-  GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.java-home=$JAVA_HOME -Dorg.gradle.jvmargs=-Xmx2048m"
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.java.home=$JAVA_HOME -Dorg.gradle.jvmargs=-Xmx2048m"
 
 jobs:
   build-android:
@@ -32,7 +32,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.9'#3.9以上cython无long The version above 3.9 of cython has no long integer
+        python-version: '3.9' #3.9以上cython无long The version above 3.9 of cython has no long integer
 
     - name: Install system dependencies
       run: |
@@ -49,8 +49,8 @@ jobs:
         python -m pip install --upgrade pip==24.0
         #下载依赖库 add your requirements
         pip install buildozer cython==0.29.33 kivy
-        #锁定稳定版p4a，规避pip新版本bug
-        pip install python-for-android==2024.09.07
+        #稳定可用p4a版本，修复版本号错误
+        pip install python-for-android==2024.1.21
 
     - name: Build APK with Buildozer
       run: |
