@@ -1,10 +1,10 @@
 [app]
 #标题允许中文 title language is not limited
-title = appname
-package.name = packagename
+title = bookkeeping
+package.name = bookkeeping
 
 #release模式不能用org.test 'org.test' can't be used in release mode
-package.domain = org.test
+package.domain = app.bookkeeping
 #工作目录 working directory
 source.dir = .
 #需要打包的文件类型 file types to be packed
@@ -13,7 +13,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.include_patterns = image/*
 version = 0.0.1
 #依赖库,后二为打包需要 The last two are needed for packaging
-requirements = python3,kivy,kivymd,libiconv,libffi
+requirements = python3,kivy,libiconv,libffi
 #icon.filename = icon.png
 #presplash.filename = presplash.png
 #fullscreen = 0
