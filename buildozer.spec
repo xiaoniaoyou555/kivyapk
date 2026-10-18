@@ -40,14 +40,14 @@ android.permissions = INTERNET
 
 #以下为release模式需要 Following is required for release mode
 
-#强制构建APK而不是AAB,但没用 Why does it build .aab instead of .apk?
-#android.aab = False
+#强制构建APK而不是AAB
+android.aab = False
 
 #签名配置 signature configuration
-#android.keystore = /home/runner/work/RepositoryName/AndAgain/DomainName.PackageName.keystore
+#android.keystore = /home/runner/work/kivyapk/kivyapk/app.bookkeeping.bookkeeping.keystore
 #android.keystore_storepass = android
 #android.keystore_keypass = android
-#android.keystore_alias = DomainName.PackageName
+#android.keystore_alias = app.bookkeeping.bookkeeping
 
 [buildozer]
 log_level = 2
